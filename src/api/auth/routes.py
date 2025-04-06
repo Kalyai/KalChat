@@ -7,8 +7,8 @@ from src.services.auth.interfaces import BaseAccountService
 
 router = APIRouter(tags=['AUTH'], prefix='/auth')
 
-@inject
 @router.post('')
+@inject
 async def register(
         schema: RegisterSchema,
         service: BaseAccountService = Depends(Provide[Container.account_service]),

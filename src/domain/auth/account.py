@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from common import BaseEntity
+from src.domain.auth.common import BaseEntity
 
 @dataclass(kw_only=True)
 class Account(BaseEntity):
@@ -9,8 +9,11 @@ class Account(BaseEntity):
     password: str
 
     def to_orm(self):
-        return {
-            'id': self.id,
+        orm_model = {
             'login': self.login,
             'password': self.password,
         }
+
+        if self.id:
+            orm_model['id'] = self.id
+        return orm_model

@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from base import BaseAccountsRepo
+from src.infra.repositories.tortoise.auth.base import BaseAccountsRepo
 from src.domain.auth.account import Account
 from src.infra.repositories.tortoise.base import BaseTortoiseOrm
 from src.infra.repositories.tortoise.models import AccountModel
