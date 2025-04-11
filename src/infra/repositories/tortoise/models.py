@@ -1,4 +1,4 @@
-from tortoise import Model, fields
+from tortoise import Model, fields  # noqa
 
 
 class AccountModel(Model):

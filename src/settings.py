@@ -15,4 +15,5 @@ class Settings(BaseSettings):
             'password': creds[4]
         }
 
+
 settings = Settings()

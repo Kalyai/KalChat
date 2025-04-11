@@ -15,7 +15,7 @@ async def lifespan(app: FastAPI):
 
 
 def create_app() -> FastAPI:
-    container = init_container() # noqa: F841
+    container = init_container()  # noqa: F841
     app = FastAPI(
         debug=settings.debug,
         lifespan=lifespan,

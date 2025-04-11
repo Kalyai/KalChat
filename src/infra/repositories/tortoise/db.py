@@ -1,4 +1,4 @@
-from tortoise import Tortoise
+from tortoise import Tortoise  # noqa
 
 from src.settings import settings
 

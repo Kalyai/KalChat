@@ -12,9 +12,13 @@ class BaseAccountsRepo(BaseTortoiseOrm):
         ...
 
     @abstractmethod
-    async def get(self):
+    async def get(self, login: str):
         ...
 
     @abstractmethod
     async def get_all(self):
+        ...
+
+    @abstractmethod
+    async def login_exsits(self, login: str):
         ...

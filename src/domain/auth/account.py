@@ -9,11 +9,7 @@ class Account(BaseEntity):
     password: str
 
     def to_orm(self):
-        orm_model = {
+        return {
             'login': self.login,
             'password': self.password,
         }
-
-        if self.id:
-            orm_model['id'] = self.id
-        return orm_model
